@@ -133,7 +133,7 @@ public class GenericParser<T> {
     public static void main(String[] args) {
         Calculable ans;
         if (args[0].equals("-i")) {
-            Expression3<MyInteger> ex;
+            Expression3 ex;
             MyInteger i = new MyInteger(1);
             ex = parse(args[1], i);
             for (int x = -100; x <= 100; x++) {
@@ -147,7 +147,7 @@ public class GenericParser<T> {
                 }
             }
         } else if (args[0].equals("-bi")) {
-            Expression3<MyBigInteger> ex;
+            Expression3 ex;
             MyBigInteger bi = new MyBigInteger(BigInteger.ONE);
             ex = parse(args[1], bi);
             for (long x = -100; x <= 100; x++) {
@@ -161,7 +161,7 @@ public class GenericParser<T> {
                 }
             }
         } else {
-            Expression3<MyDouble> ex;
+            Expression3 ex;
             MyDouble d = new MyDouble(1.0);
             ex = parse(args[1], d);
             for (double x = -100.0; x <= 100.0; x += 1.0) {
