@@ -1,6 +1,6 @@
 package functions.calculable;
 
-public interface Calculable<T> {
+public interface Calculable<T extends Calculable<T>> {
     public T add(T a);
     public T sub(T a);
     public T mul(T a);

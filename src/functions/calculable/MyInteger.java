@@ -1,7 +1,7 @@
 package functions.calculable;
 
 public class MyInteger implements Calculable<MyInteger> {
-    Integer a;
+    private Integer a;
     public MyInteger (Integer a) {
         this.a = a;
     }
