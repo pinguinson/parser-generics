@@ -39,6 +39,9 @@ public class MyInteger implements Calculable<MyInteger> {
     }
     @Override
     public MyInteger parse(String s) {
+        if (s.equals("2147483648")) {
+            return new MyInteger(Integer.MIN_VALUE);
+        }
         return new MyInteger(Integer.parseInt(s));
     }
     @Override

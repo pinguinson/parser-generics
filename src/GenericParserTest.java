@@ -76,7 +76,7 @@ public class GenericParserTest {
         System.setOut(new PrintStream(out));
         String sType = new String[]{"-i", "-d", "-bi"}[test.type];
         try {
-            ExpressionParser.main(new String[]{sType, test.expr});
+            GenericParser.main(new String[]{sType, test.expr});
         } catch (Throwable e) {
             System.err.println("throwable object has been thrown on test:");
             System.err.println(test.expr);

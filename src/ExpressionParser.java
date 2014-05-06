@@ -1,8 +1,6 @@
 import functions.*;
 import functions.calculable.*;
 
-import java.math.BigInteger;
-
 public class ExpressionParser {
 
     private static String current;
@@ -46,18 +44,14 @@ public class ExpressionParser {
 
     private static <T extends Calculable<T>> Expression3<T> parseValue(T type) {
         if (current.charAt(0) >= '0' && current.charAt(0) <= '9') {
-            try {
-                return new Const<T>(type.parse(current));
-            } catch (NumberFormatException e) {
-                return new Const<T>(new MyInteger(Integer.MIN_VALUE));
-            }
+            return new Const<>(type.parse(current));
         } else if (current.charAt(0) >= 'x' && current.charAt(0) <= 'z') {
             return new Variable<>(current);
         } else if (current.equals("(")) {
             return parseExpr(type);
         } else {
             assert false;
-            return new Const<T>(type.parse("0"));
+            return new Const<>(type.parse("0"));
         }
     }
 
@@ -65,7 +59,7 @@ public class ExpressionParser {
         current = lex.next();
         if (current.equals("")) {
             assert false;
-            return new Const<T>(type.parse("0"));
+            return new Const<>(type.parse("0"));
         }
         switch (current) {
             case "-":

@@ -9,6 +9,6 @@ public interface Calculable<T extends Calculable<T>> {
     public T not();
     public T neg();
     public T abs();
-    public Calculable parse(String s);
+    public T parse(String s);
     public String value();
 }
