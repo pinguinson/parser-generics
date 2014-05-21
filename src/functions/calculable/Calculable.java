@@ -1,6 +1,6 @@
 package functions.calculable;
 
-public interface Calculable<T extends Calculable<T>> {
+public interface Calculable<T> {
     public T add(T a);
     public T sub(T a);
     public T mul(T a);
@@ -10,5 +10,6 @@ public interface Calculable<T extends Calculable<T>> {
     public T neg();
     public T abs();
     public T parse(String s);
+    public T parse(int val);
     public String value();
 }

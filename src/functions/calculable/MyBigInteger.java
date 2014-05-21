@@ -44,6 +44,10 @@ public class MyBigInteger implements Calculable<MyBigInteger> {
         return new MyBigInteger(new BigInteger(s));
     }
     @Override
+    public MyBigInteger parse(int val) {
+        return new MyBigInteger(BigInteger.valueOf(val));
+    }
+    @Override
     public String value() {
         return a.toString();
     }

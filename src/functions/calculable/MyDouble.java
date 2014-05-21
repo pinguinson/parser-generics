@@ -42,6 +42,10 @@ public class MyDouble implements Calculable<MyDouble> {
         return new MyDouble(Double.parseDouble(s));
     }
     @Override
+    public MyDouble parse(int val) {
+        return new MyDouble((double) val);
+    }
+    @Override
     public String value() {
         return a.toString();
     }

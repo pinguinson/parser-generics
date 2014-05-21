@@ -4,7 +4,7 @@ import functions.calculable.*;
 
 public class Not<T extends Calculable<T>> extends MonadicOperation<T> {
 
-    public Not(Expression3 a) {
+    public Not(Expression3<T> a) {
         super(a);
     }
 

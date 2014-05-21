@@ -45,6 +45,10 @@ public class MyInteger implements Calculable<MyInteger> {
         return new MyInteger(Integer.parseInt(s));
     }
     @Override
+    public MyInteger parse(int val) {
+        return new MyInteger(val);
+    }
+    @Override
     public String value() {
         return a.toString();
     }

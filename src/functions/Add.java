@@ -3,7 +3,7 @@ package functions;
 import functions.calculable.*;
 
 public class Add <T extends Calculable<T>> extends BinaryOperation<T> {
-    public Add(Expression3 a, Expression3 b){
+    public Add(Expression3<T> a, Expression3<T> b){
         super(a, b);
     }
 

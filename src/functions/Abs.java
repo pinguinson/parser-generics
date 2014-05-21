@@ -4,7 +4,7 @@ import functions.calculable.*;
 
 public class Abs<T extends Calculable<T>> extends MonadicOperation<T> {
 
-    public Abs(Expression3 a) {
+    public Abs(Expression3<T> a) {
         super(a);
     }
 
